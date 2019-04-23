@@ -102,7 +102,7 @@
 	 在Key文本框里黏贴id_rsa.pub文件的内容。
 
 
-	七：bug分支：
+	bug分支：
 
      在开发中，会经常碰到bug问题，那么有了bug就需要修复，在Git中，分支是很强大的，每个bug都可以通过一个临时分支来修复，修复完成后，合并分支，然后将临时的分支删除掉。
 	比如我在开发中接到一个404 bug时候，我们可以创建一个404分支来修复它，但是，当前的dev分支上的工作还没有提交
@@ -110,3 +110,14 @@
 	所以现在我可以通过创建issue-404分支来修复bug了。
 	首先我们要确定在那个分支上修复bug，比如我现在是在主分支master上来修复的，现在我要在master分支上创建一个临时分支，演示如下：
 	修复完成后，切换到master分支上，并完成合并，最后删除issue-404分支
+> 
+> 换电脑在使用Git的时候遇到了这个问题：
+> 输 入 git add * 后出现
+> warning: LF will be replaced by CRLF in ......  
+> The file will have its original line endings in your working directory.  
+> 解决方法：
+> git config --global core.autocrlf false
+> 就可以解决了。
+> 原因就是：
+> 
+> 原因是路径中存在 / 的符号转义问题，false就是不转换符号默认是true，相当于把路径的 / 符号进行转义，这样添加的时候就有问题
