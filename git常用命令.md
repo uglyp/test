@@ -51,7 +51,9 @@
 
    **git clone https://github.com/tugenhua0707/testgit  ：从远程库中克隆**
 
-   **git checkout –b dev  ：创建dev分支 并切换到dev分支上**
+   **git clone -b 分支名字 远程库地址 ：       克隆制定分支的远程库**
+
+   git checkout –b dev  ：创建dev分支 并切换到dev分支上
 
    git branch  ：查看当前所有的分支
 
